@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom.js</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<p class="greet">How are we today?</p>
+<p class="good">i am good</p>
+<span class="greet">very good</span>
+<div>
+    <h2>Good afternoon</h2>
+    <button class="buttonUp">Click me</button>
+    <details id="dropdown">Dropdown</details>
+</div>
+
+<form>
+    <label for="name">First Name</label>
+    <input type="text" id="name"><br>
+    <label for="email">Email</label>
+    <input type="email" id="email"><br>
+    <label for="password">Password</label>
+    <input type="password" id="password"><br>
+    <label for="radio">Male</label>
+    <input type="radio" id="radio" name="gender">
+    <label for="radio">Female</label>
+    <input type="radio" id="radio" name="gender">
+    <label for="radio">others</label>
+    <input type="radio" name="gender" id="radio" ><br>
+    <label for="Rice">Rice</label>
+    <input type="checkbox">
+    <label for="beans">beans</label>
+    <input type="checkbox" id="yam">
+    <label for="yam">yam</label>
+    <input type="checkbox" id="yam">
+    <select name="lang" id="">
+    <option value="English">English</option>
+    <option value="Yoruba">Yoruba</option>
+    <option value="Igbo">Igbo</option>
+</select><br>
+
+<button id="submit" onclick="submitForm(event)">Submit</button>
+</form>
+
+<h6 onclick="changeColor()" class="click1">click me</h6>
+
+    <script src="index.js"></script>
+</body>
+</html>

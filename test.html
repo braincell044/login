@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+    <form>
+        <label for="Email">Email</label><br>
+        <input type="email" id="email"><br>
+        <label for="password">Password</label><br>
+        <input type="password" id="password"><br>
+ 
+    
+
+    </form>
+
+    <button onclick="getLocation()">login</button>
+    <p id="demo"></p>
+ 
+
+
+    <script>
+var x = document.getElementById("demo");
+const geolib = require('geolib');
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+  let emailNow = document.getElementById("email").value
+      localStorage.setItem( "email", emailNow)
+      let pass = document.getElementById("password").value
+      localStorage.setItem("Password", pass)
+
+}
+
+function showPosition(position) {
+  const lat = position.coords.latitude;
+  const lon = position.coords.longitude;
+
+  // Convert coordinates to IP address
+  fetchIPFromCoordinates(lat, lon).then(ip => {
+      x.innerHTML = "";
+    localStorage.setItem("location 54",ip)
+  });
+}
+
+
+
+async function fetchIPFromCoordinates(latitude, longitude) {
+  try {
+    const response = await fetch(`https://api.ipify.org?lat=${latitude}&lon=${longitude}`);
+    const data = await response.text();
+    return data.trim();
+  } catch (error) {
+    console.error('Error fetching IP:', error);
+    return 'Unable to determine IP';
+  }
+}
+
+
+
+// function emailFunction(){
+//     let emailNow = document.getElementById("email").value
+//       localStorage.setItem( "email", emailNow)
+//       let pass = document.getElementById("password").value
+//       localStorage.setItem("Password", pass)
+  
+//   }
+
+//   let btnNow = document.getElementById("mybtn")
+//   btnNow.addEventListener("click",getLocation)
+
+
+    </script>
+</body>
+</html>

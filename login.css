@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap');
+
+*{
+    box-sizing: border-box !important;
+    padding: 0 !important;
+    margin: 0 !important;
+
+   
+}
+
+html,
+body {
+  
+    height: 100%;
+    font-family: "Short Stack", sans-serif !important;
+}
+.welcome-img{
+  
+   
+    background-image: url("assest/images/welcome.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.login{
+    background-image: url("assest/images/spec.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    height: 100%;
+    width: 810px;
+
+}
+.logBtn{
+    background-color: #2d85DE !important;
+    color: white !important;
+    margin : 0 0 0 150px !important;
+    padding:8px 0 !important;
+    width: 530px;
+}
+.myform{
+     
+        width: 65% !important;
+        margin: 20% !important ;
+        background: transparent !important;
+        padding: 40px !important;
+        border-radius: 15px !important;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    
+}
+.passForm{
+    outline: none ;
+    border: 1px solid white;
+}
+.emailForm{
+    outline: none !important;
+
+    border: 1px solid white;
+}
+.welcome-img{
+    max-width: 100%;
+    height: auto;
+ 
+    
+}
+.part-1{
+    background-color: #2d85DE;
+
+}
+.row {
+    margin: 0 !important;
+    height: 100vh !important;
+}
+
+@media (min-width:760px) and (max-width:1030px){
+
+    .login{
+        width: 900px;
+    }
+    .welcome-img{
+        width: 800px !important;
+        height: 700px;
+     
+        
+    }
+
+}
+@media (max-width:600px) {
+    .login{
+        width: 430px;
+    }
+    .logBtn{
+        background-color: #2d85DE !important;
+        color: white !important;
+        margin : 0 0 0 80px !important;
+        padding:8px 0 !important;
+        width: 290px;
+    }
+}
